@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/ic_home"
+        android:title="首頁" />
+
+    <item
+        android:id="@+id/menu_pub"
+        android:icon="@drawable/ic_pub"
+        android:title="公众号" />
+
+    <item
+        android:id="@+id/menu_nav"
+        android:icon="@drawable/ic_nav"
+        android:title="导航" />
+
+</menu>
