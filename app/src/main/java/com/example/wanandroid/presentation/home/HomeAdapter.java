@@ -42,7 +42,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         } else {
             this.banners = new ArrayList<>();
         }
-        notifyItemChanged(0);
+        notifyItemChanged(0);//通知RecyclerView刷新banner，RecyclerView接口的方法
     }
 
     public void submitList(List<Article> articles) {
@@ -51,7 +51,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         } else {
             this.articles = new ArrayList<>();
         }
-        notifyDataSetChanged();
+        notifyDataSetChanged();//通知RecyclerView刷新数据，因为文章列表的位置会变化，所以用DataSetChanged刷新整个列表
     }
 
     @Override

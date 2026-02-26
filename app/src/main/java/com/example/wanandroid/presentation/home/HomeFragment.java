@@ -100,7 +100,7 @@ public class HomeFragment extends Fragment {
         viewModel.articles.observe(getViewLifecycleOwner(), articles -> {
             homeAdapter.submitList(articles);
             if (swipeRefreshLayout != null) {
-                swipeRefreshLayout.setRefreshing(false); // 當數據真正返回時，停止轉圈
+                swipeRefreshLayout.setRefreshing(false); // 数据真正返回，停止转圈
             }
         });
 
@@ -119,13 +119,13 @@ public class HomeFragment extends Fragment {
         viewModel.refreshHomeData();
     }
     private void startAutoScroll() {
-        // 停止之前的任務，避免重複
+        // 停止之前的任务，避免重复
         stopAutoScroll();
 
         bannerRunnable = new Runnable() {
             @Override
             public void run() {
-                // 獲取 RecyclerView 中第 0 個 Item (即 Banner 所在的 ViewHolder)
+                // 获取 RecyclerView 中第 0 个 Item (即 Banner 所在的 ViewHolder)
                 RecyclerView recyclerView = getView().findViewById(R.id.rv_articles);
                 RecyclerView.ViewHolder viewHolder = recyclerView.findViewHolderForAdapterPosition(0);
 
@@ -137,7 +137,7 @@ public class HomeFragment extends Fragment {
                         viewPager.setCurrentItem(nextItem, true);
                     }
                 }
-                // 每 3 秒執行一次
+                // 每 4 秒执行一次
                 bannerHandler.postDelayed(this, 4000);
             }
         };
